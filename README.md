@@ -13,6 +13,27 @@ On 300 official SciFact test queries, BM25 outperformed the exact-bigram fusion 
 
 The 0.40 overlap threshold, selected on 807 calibration queries, emitted 163 citation candidates on test. Of the cited top documents, 119 had a positive relevance judgment (73.0% of emissions, 54.3% coverage). Unsupported or refuting evidence can still be relevant. The benchmark measures document relevance. [Measured metrics](reports/scifact-metrics.json)
 
+## Visual Results Gallery
+
+![Ranking measures at cutoffs 1, 5 and 10](figures/results/ranking-by-depth.png)
+
+Weighted BM25 leads on all three reported metrics.
+
+![Paired nDCG outcomes on the test set](figures/results/paired-query-outcomes.png)
+
+BM25 leads on 84 queries, ties on 188 and trails on 28.
+
+![Document judgment and abstention outcomes](figures/results/citation-gate.png)
+
+The gate emits 163 candidates and abstains on 137 queries. Of the emitted documents, 119 have a positive relevance judgment.
+
+Recreate the gallery from the reports or run outputs listed below.
+
+```sh
+python -m pip install -r requirements-visuals.txt
+python plot_results.py
+```
+
 ## Data and architecture
 
 ```mermaid
