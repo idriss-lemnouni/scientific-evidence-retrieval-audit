@@ -1,0 +1,79 @@
+{
+  "provenance": {
+    "archive_sha256": "536e14446a0ba56ed1398ab1055f39fe852686ecad24a6306c80c490fa8e0165",
+    "archive_bytes": 2816079,
+    "documents": 5183,
+    "query_records": 1109,
+    "train_queries": 807,
+    "train_text_overlaps_removed": 2,
+    "test_queries": 300
+  },
+  "selected_model": "bm25",
+  "threshold": 0.4,
+  "results": {
+    "train_calibration": {
+      "bm25": {
+        "ndcg@1": 0.572491,
+        "recall@1": 0.550537,
+        "mrr@1": 0.572491,
+        "ndcg@5": 0.649348,
+        "recall@5": 0.720198,
+        "mrr@5": 0.633767,
+        "ndcg@10": 0.675991,
+        "recall@10": 0.796861,
+        "mrr@10": 0.643749
+      },
+      "phrase-fusion": {
+        "ndcg@1": 0.448575,
+        "recall@1": 0.433808,
+        "mrr@1": 0.448575,
+        "ndcg@5": 0.541307,
+        "recall@5": 0.622924,
+        "mrr@5": 0.521644,
+        "ndcg@10": 0.569179,
+        "recall@10": 0.704915,
+        "mrr@10": 0.531531
+      },
+      "citation_gate": {
+        "threshold": 0.4,
+        "emitted": 471,
+        "matched": 324,
+        "coverage": 0.5836431226765799,
+        "judged_relevance_among_emitted": 0.6878980891719745,
+        "f0.5": 0.6020066889632106
+      }
+    },
+    "test": {
+      "bm25": {
+        "ndcg@1": 0.566667,
+        "recall@1": 0.550833,
+        "mrr@1": 0.566667,
+        "ndcg@5": 0.654746,
+        "recall@5": 0.734278,
+        "mrr@5": 0.636667,
+        "ndcg@10": 0.676838,
+        "recall@10": 0.798278,
+        "mrr@10": 0.644392
+      },
+      "phrase-fusion": {
+        "ndcg@1": 0.436667,
+        "recall@1": 0.424444,
+        "mrr@1": 0.436667,
+        "ndcg@5": 0.557066,
+        "recall@5": 0.664722,
+        "mrr@5": 0.527667,
+        "ndcg@10": 0.589087,
+        "recall@10": 0.758722,
+        "mrr@10": 0.540074
+      },
+      "citation_gate": {
+        "threshold": 0.4,
+        "emitted": 163,
+        "matched": 119,
+        "coverage": 0.5433333333333333,
+        "judged_relevance_among_emitted": 0.7300613496932515,
+        "f0.5": 0.625
+      }
+    }
+  }
+}
